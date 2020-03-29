@@ -77,4 +77,38 @@ int main()
     WeekDay payDay = Sunday;
     payDay = Friday;
     cout << "Pay day number" << payDay << endl; // 6; Enums internally store numbers not strings
+
+    // FOR LOOP
+
+    int base{ 2 },
+        exponent{ 4 },
+        result{ base };
+
+    for (int cicle = 1; cicle < exponent; cicle++)
+    {
+        result *= base;
+    }
+    std::cout << base << " Raised to the power of " << exponent << " = " << result << endl;
+
+    // Switch
+
+    char letter = 'n';
+    switch (letter) 
+    {
+    case ('Y'):
+        std::cout << "You chose: Y" << endl;
+        break;
+    case ('y'):
+        std::cout << "You chose: y" << endl;
+        break;
+    case ('N'):
+        std::cout << "You chose: N" << endl;
+        break;
+    case ('n'):
+        std::cout << "You chose: n" << endl;
+        break;
+    default:
+        std::cout << "You didn't choose a valid option" << endl;
+        break;
+    }
 }
