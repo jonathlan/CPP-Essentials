@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+#include "Rectangle.h"
+
 int main()
 {
     // NUMERIC DATA TYPES
@@ -111,4 +113,20 @@ int main()
         std::cout << "You didn't choose a valid option" << endl;
         break;
     }
+
+    // OBJECTS
+
+    // This class is defined in the Rectangle.h that is added to this file by the include statement #include "Rectangle.h"
+    Rectangle smallRectangle{1,2}; // It's always important to initialize the variables. {1,2}
+    smallRectangle.width = 3;
+    smallRectangle.height = 1;    
+
+    Rectangle largeRectangle;
+    largeRectangle.width = 6;
+    largeRectangle.height = 2;
+
+    cout << "Small Rectangle height: " << smallRectangle.height << " width: " << smallRectangle.width << endl;
+    cout << "Large Rectangle height: " << largeRectangle.height << " width: " << largeRectangle.width << endl;
+
+    return 0;
 }
