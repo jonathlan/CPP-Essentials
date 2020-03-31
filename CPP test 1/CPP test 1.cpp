@@ -116,17 +116,24 @@ int main()
 
     // OBJECTS
 
-    // This class is defined in the Rectangle.h that is added to this file by the include statement #include "Rectangle.h"
+    // This class is defined in the Rectangle.h that is added to this file by the include statement #include "ectangle.h"
     Rectangle smallRectangle{1,2}; // It's always important to initialize the variables. {1,2}
-    smallRectangle.width = 3;
-    smallRectangle.height = 1;    
+    smallRectangle.resize(3, 2);
 
     Rectangle largeRectangle;
-    largeRectangle.width = 6;
-    largeRectangle.height = 2;
+    largeRectangle.resize(6, 3);
 
-    cout << "Small Rectangle height: " << smallRectangle.height << " width: " << smallRectangle.width << endl;
-    cout << "Large Rectangle height: " << largeRectangle.height << " width: " << largeRectangle.width << endl;
+    cout << "Small Rectangle height: " << smallRectangle.get_Heigth() << " width: " << smallRectangle.get_Width() << endl;
+    cout << "Large Rectangle height: " << largeRectangle.get_Heigth() << " width: " << largeRectangle.get_Width() << endl;
+
+    // ENCAPSULATION
+    Rectangle uninitalized; // Variables will be initalized by the constructor {1,1}, but it's not recommended.
+    Rectangle value{}; // Brakets tells the reader that we will use the default constructor{1,1}, this is better.
+    Rectangle aggregate{ 1, 2 }; // Here we actually initialize the variables
+
+    aggregate.resize(10, 5);
+    int area_of_aggregate{ aggregate.area() };
+
 
     return 0;
 }
