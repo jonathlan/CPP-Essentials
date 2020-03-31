@@ -8,7 +8,7 @@ void Rectangle::resize(int newWidth, int newHeight)
 }
 
 //Area
-int Rectangle::area()
+int Rectangle::area() const // Area is constant because it does not modify the object, only provides with the value of the area.
 {
 	return _width * _height;
 }

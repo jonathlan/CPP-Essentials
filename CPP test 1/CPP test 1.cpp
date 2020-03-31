@@ -134,6 +134,19 @@ int main()
     aggregate.resize(10, 5);
     int area_of_aggregate{ aggregate.area() };
 
+    // CONSTANT OBJECTS
+    // Similarly to variables those are objects that does not change
+    // Think about constant objects sinze the very begininig it leads to better and more encapsulated code
+
+    const Rectangle immutable_Rectangle{3, 6};
+    // It will not work just to call any function, like:
+    // int area{ immutable_Rectangle.area() };
+    // We need to modify the method to be constant so that the compiler knows that it does not change the object.
+    int area{immutable_Rectangle.area()};
+    // Watch out because resize() method actually changes the object.
+    // Get withd and height does not change the object. They're constant too
+    int vWidth{ immutable_Rectangle.get_Width() };
+    int vHeight{ immutable_Rectangle.get_Heigth() };
 
     return 0;
 }

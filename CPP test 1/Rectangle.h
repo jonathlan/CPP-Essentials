@@ -14,10 +14,10 @@ public:
 	{}
 
 	// Properties
-	int get_Width() { return _width; }
-	int get_Heigth() { return _height; }
+	int get_Width() const { return _width; }
+	int get_Heigth() const { return _height; }
 
 	//Methods
 	void resize(int newWidth, int newHeight);
-	int area();
+	int area() const; // Area is constant because it does not modify the object, only provides with the value of the area.
 };
